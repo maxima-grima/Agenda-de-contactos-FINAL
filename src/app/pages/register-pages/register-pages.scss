@@ -1,0 +1,106 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#0a3d62, #1e90ff);
+    font-family: "Poppins", sans-serif;
+}
+
+.register-tarjeta {
+    background-color: #fff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    width: 270px;
+    max-width: 90%;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    h1 {
+        color: #333;
+        font-size: 1.1rem;
+        margin-bottom: 0.9rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+        label {
+            text-align: left;
+            font-weight: 600;
+            color: #444;
+            font-size: 0.75rem;
+            margin-bottom: 0.15rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 0.8rem;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+            &:focus {
+                border-color: #4a90e2;
+                outline: none;
+                box-shadow: 0 0 3px rgba(74, 144, 226, 0.25);
+            }
+        }
+
+        .error {
+            color: #d93025;
+            font-size: 0.75rem;
+            text-align: left;
+            margin-top: 4px;
+            margin-bottom: 2px;
+            display: block;
+        }
+
+
+        button {
+            margin-top: 0.4rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 6px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, transform 0.1s;
+
+            &:hover:not(:disabled) {
+                background-color: #357ab8;
+            }
+
+            &:disabled {
+                background-color: #9ebde3;
+                cursor: not-allowed;
+            }
+
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+
+        p {
+            font-size: 0.75rem;
+            margin-top: 0.6rem;
+            color: #555;
+
+            a {
+                color: #4a90e2;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<li class="contact-row" [class.favorite]="contact().isFavorite">
+  <span>
+    <a [routerLink]="['/contacts', contact().id]">
+      {{ contact().firstName }} {{ contact().lastName }}
+      @if (contact().isFavorite) { ⭐ }
+    </a>
+  </span>
+  <span>{{ contact().number }}</span>
+  <span>{{ contact().email }}</span>
+  <span>-</span>
+  <span class="actions">
+    <button class= "delete" (click)="confirmDelete()">Borrar</button>
+    <a [routerLink]="['/contacts', contact().id, 'edit']">Editar</a>
+  </span>
+</li>

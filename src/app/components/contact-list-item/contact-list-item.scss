@@ -1,0 +1,53 @@
+.contact-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1.6fr 2.4fr 1fr 1.8fr;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #d6d6d6;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #f3f6fb;
+  }
+
+  span {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+  }
+
+  a {
+    color: #003366;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  .delete {
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: #c0392b;
+    color: #eef4fa;
+    &:hover {
+      background-color: #a93226;
+    }
+  }
+
+  a {
+    color: #1e4875;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  &.favorite {
+    background-color: #eef4fa;
+  }
+}

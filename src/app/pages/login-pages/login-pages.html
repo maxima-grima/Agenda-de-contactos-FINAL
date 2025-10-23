@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-tarjeta">
+        <h1 id="title">Agenda de contactos</h1>
+        <form id="formulario" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+          <input id="email" name="email" placeholder="Email" type="email" ngModel #email="ngModel" required autocomplete="email">
+            @if (email.invalid && !email.pristine) {
+            <p class="error">Debe colocar un correo electrónico valido.</p>
+            }
+            <input id="password" name="password" type="password" ngModel #password="ngModel" minlength="8"
+                autocomplete="current-password" placeholder="●●●●●●●●●●●" required>
+            @if (password.invalid && !password.pristine) {
+            <p class="error">Debe colocar una contraseña de al menos 8 caracteres.</p>
+            }
+         <button [disabled]="isLoading || loginForm.invalid">Iniciar sesión</button>
+  @if(isLoading){
+    <app-spiner></app-spiner>
+  }
+  @if (errorLogin) {
+    <p class="error">Datos incorrectos, intente nuevamente.</p>
+  } 
+  <p>No tenés cuenta? <a routerLink="/register">Registrate</a></p>
+</form>
+</div>

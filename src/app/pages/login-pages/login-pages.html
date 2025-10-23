@@ -11,7 +11,7 @@
             @if (password.invalid && !password.pristine) {
             <p class="error">Debe colocar una contraseña de al menos 8 caracteres.</p>
             }
-         <button [disabled]="isLoading || loginForm.invalid">Iniciar sesión</button>
+         <button id= "btn-login"[disabled]="isLoading || loginForm.invalid">Iniciar sesión</button>
   @if(isLoading){
     <app-spiner></app-spiner>
   }
